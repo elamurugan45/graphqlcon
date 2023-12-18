@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type MerchantModel {
+  _id: ID!
+  name: String!
+  email: String!
+  password: String!
+}
+
+type Query {
+  login: String!
+  employees: [MerchantModel!]!
+}
+
+type Mutation {
+  createEmployee(input: MerchantDto!): MerchantModel!
+  updateEmployee(id: String!, input: MerchantDto!): MerchantModel!
+  deleteEmployee(id: String!): MerchantModel!
+}
+
+input MerchantDto {
+  name: String
+  email: String
+  password: String!
+}
